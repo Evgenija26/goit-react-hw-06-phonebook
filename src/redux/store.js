@@ -9,5 +9,4 @@ export const store = configureStore({
     filter: filterReducer,
   },
 });
-
 export const persistor = persistStore(store);
