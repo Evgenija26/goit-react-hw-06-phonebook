@@ -5,10 +5,10 @@ import { getVisibleContacts } from 'redux/selectors';
 import { useDispatch } from 'react-redux';
 import { removeContact } from 'redux/contactsSlice';
 
-export const Contacts = id => {
+export const Contacts = () => {
   const contacts = useSelector(getVisibleContacts);
   const dispatch = useDispatch();
-  const handleDelete = () => dispatch(removeContact(id));
+  const handleDelete = () => dispatch(removeContact());
   return (
     <ul className={css.ContactsList}>
       {contacts.map(contact => (
