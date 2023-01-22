@@ -1,4 +1,3 @@
-// import React from 'react';
 import css from './Filter.module.css';
 import { nanoid } from 'nanoid';
 import { useSelector, useDispatch } from 'react-redux';
@@ -11,21 +10,10 @@ export const Filter = () => {
   const dispatch = useDispatch();
 
   const onChange = e => {
-    // setFilter({ filter: e.target.value });
-
     const normalizedValue = e.target.value.toLowerCase();
 
     dispatch(changeFilter(normalizedValue));
   };
-
-  // const getVisibleContacts = () => {
-
-  //   return contacts.filter(contact =>
-  //     contact.name.toLowerCase().includes(normalizedFilter)
-  //   );
-  // };
-
-  // const visibleContacts = getVisibleContacts();
 
   return (
     <div className={css.Filter}>
