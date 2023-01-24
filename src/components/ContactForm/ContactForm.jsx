@@ -16,14 +16,6 @@ export const ContactForm = () => {
   const contacts = useSelector(getVisibleContacts);
   const dispatch = useDispatch();
 
-  // const addContact = contact => {
-
-  //   setContacts(prevContacts => [
-  //     ...prevContacts,
-  //     { id: nanoid(), ...contact },
-  //   ]);
-  // };
-
   const handleSubmit = e => {
     e.preventDefault();
 
@@ -40,8 +32,6 @@ export const ContactForm = () => {
     setName('');
     setNumber('');
   };
-
-  // Отвечает за обновление состояния
 
   const handleChange = e => {
     const { name, value } = e.target;

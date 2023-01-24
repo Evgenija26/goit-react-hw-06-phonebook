@@ -31,9 +31,6 @@ const contactsSlice = createSlice({
       );
       state.items.splice(index, 1);
     },
-    //     removeContact = id => {
-    //     setContacts(prevState => prevState.filter(contact => contact.id !== id));
-    //   };
   },
 });
 export const { addContact, removeContact } = contactsSlice.actions;
